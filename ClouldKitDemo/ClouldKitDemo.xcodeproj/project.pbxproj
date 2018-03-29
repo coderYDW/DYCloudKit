@@ -15,6 +15,8 @@
 		181A42D3206C93AB004EE2A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42D2206C93AB004EE2A1 /* main.m */; };
 		181A42DD206C93AB004EE2A1 /* ClouldKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42DC206C93AB004EE2A1 /* ClouldKitDemoTests.m */; };
 		181A42E8206C93AB004EE2A1 /* ClouldKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42E7206C93AB004EE2A1 /* ClouldKitDemoUITests.m */; };
+		181A42F8206CBB93004EE2A1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A42F7206CBB93004EE2A1 /* HealthKit.framework */; };
+		181A4340206CC5FD004EE2A1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A433F206CC5FD004EE2A1 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		181A42E3206C93AB004EE2A1 /* ClouldKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClouldKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181A42E7206C93AB004EE2A1 /* ClouldKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClouldKitDemoUITests.m; sourceTree = "<group>"; };
 		181A42E9206C93AB004EE2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181A42F5206CBB93004EE2A1 /* ClouldKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClouldKitDemo.entitlements; sourceTree = "<group>"; };
+		181A42F7206CBB93004EE2A1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		181A433F206CC5FD004EE2A1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181A42F8206CBB93004EE2A1 /* HealthKit.framework in Frameworks */,
+				181A4340206CC5FD004EE2A1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +92,7 @@
 				181A42DB206C93AB004EE2A1 /* ClouldKitDemoTests */,
 				181A42E6206C93AB004EE2A1 /* ClouldKitDemoUITests */,
 				181A42C1206C93AB004EE2A1 /* Products */,
+				181A42F6206CBB93004EE2A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +109,7 @@
 		181A42C2206C93AB004EE2A1 /* ClouldKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				181A42F5206CBB93004EE2A1 /* ClouldKitDemo.entitlements */,
 				181A42C3206C93AB004EE2A1 /* AppDelegate.h */,
 				181A42C4206C93AB004EE2A1 /* AppDelegate.m */,
 				181A42C6206C93AB004EE2A1 /* ViewController.h */,
@@ -130,6 +139,15 @@
 				181A42E9206C93AB004EE2A1 /* Info.plist */,
 			);
 			path = ClouldKitDemoUITests;
+			sourceTree = "<group>";
+		};
+		181A42F6206CBB93004EE2A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				181A433F206CC5FD004EE2A1 /* CloudKit.framework */,
+				181A42F7206CBB93004EE2A1 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +218,20 @@
 					181A42BF206C93AB004EE2A1 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					181A42D7206C93AB004EE2A1 = {
 						CreatedOnToolsVersion = 9.2;
@@ -430,12 +462,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ClouldKitDemo/ClouldKitDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G2LMW2897;
 				INFOPLIST_FILE = ClouldKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dov.ClouldKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -444,12 +480,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ClouldKitDemo/ClouldKitDemo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G2LMW2897;
 				INFOPLIST_FILE = ClouldKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dov.ClouldKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
