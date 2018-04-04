@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="fetch"/>
                                 <connections>
-                                    <action selector="fetch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qOa-P8-ySN"/>
+                                    <segue destination="P7t-o5-jth" kind="show" id="bbU-PM-FLj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNv-pR-41F">
@@ -126,6 +126,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSS-DU-Trd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1205.5999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--获取数据-->
+        <scene sceneID="ghB-1Q-4Fc">
+            <objects>
+                <viewController title="获取数据" id="P7t-o5-jth" customClass="DYFetchRecordViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HcK-Za-92D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="phu-VE-DkR">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="P7t-o5-jth" id="4Dd-fK-Ibe"/>
+                                    <outlet property="delegate" destination="P7t-o5-jth" id="NKZ-O5-2zT"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEa-f1-nmL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="获取">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchAction:" destination="P7t-o5-jth" eventType="touchUpInside" id="ekV-yd-mzm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iEa-f1-nmL" firstAttribute="leading" secondItem="0Sv-uo-714" secondAttribute="leading" id="2z8-oK-Ew2"/>
+                            <constraint firstItem="phu-VE-DkR" firstAttribute="top" secondItem="0Sv-uo-714" secondAttribute="top" constant="44" id="7s9-SW-FwE"/>
+                            <constraint firstItem="iEa-f1-nmL" firstAttribute="top" secondItem="0Sv-uo-714" secondAttribute="top" id="MQG-ZM-vve"/>
+                            <constraint firstItem="0Sv-uo-714" firstAttribute="bottom" secondItem="phu-VE-DkR" secondAttribute="bottom" id="Nso-xd-JAB"/>
+                            <constraint firstItem="0Sv-uo-714" firstAttribute="trailing" secondItem="phu-VE-DkR" secondAttribute="trailing" id="Qnv-7W-MZ9"/>
+                            <constraint firstItem="0Sv-uo-714" firstAttribute="trailing" secondItem="iEa-f1-nmL" secondAttribute="trailing" id="gAe-Zf-qzp"/>
+                            <constraint firstItem="phu-VE-DkR" firstAttribute="top" secondItem="iEa-f1-nmL" secondAttribute="bottom" id="iT1-VQ-m8S"/>
+                            <constraint firstItem="phu-VE-DkR" firstAttribute="leading" secondItem="0Sv-uo-714" secondAttribute="leading" id="lg4-Ax-gTe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Sv-uo-714"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="phu-VE-DkR" id="bBJ-Mr-A0j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7R-1u-I6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="853"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lyj-bB-yGH">
