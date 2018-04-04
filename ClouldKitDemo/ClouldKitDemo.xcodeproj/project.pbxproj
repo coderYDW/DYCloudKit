@@ -17,6 +17,7 @@
 		181A42E8206C93AB004EE2A1 /* ClouldKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42E7206C93AB004EE2A1 /* ClouldKitDemoUITests.m */; };
 		181A42F8206CBB93004EE2A1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A42F7206CBB93004EE2A1 /* HealthKit.framework */; };
 		181A4340206CC5FD004EE2A1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A433F206CC5FD004EE2A1 /* CloudKit.framework */; };
+		181A43492074D065004EE2A1 /* DYSaveRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A43482074D065004EE2A1 /* DYSaveRecordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,9 @@
 		181A42F5206CBB93004EE2A1 /* ClouldKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClouldKitDemo.entitlements; sourceTree = "<group>"; };
 		181A42F7206CBB93004EE2A1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		181A433F206CC5FD004EE2A1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		181A43472074D065004EE2A1 /* DYSaveRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSaveRecordViewController.h; sourceTree = "<group>"; };
+		181A43482074D065004EE2A1 /* DYSaveRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSaveRecordViewController.m; sourceTree = "<group>"; };
+		181A434A2074D243004EE2A1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		181A42C2206C93AB004EE2A1 /* ClouldKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				181A43462074D031004EE2A1 /* SaveRecord */,
 				181A42F5206CBB93004EE2A1 /* ClouldKitDemo.entitlements */,
 				181A42C3206C93AB004EE2A1 /* AppDelegate.h */,
 				181A42C4206C93AB004EE2A1 /* AppDelegate.m */,
@@ -119,6 +124,7 @@
 				181A42CE206C93AB004EE2A1 /* LaunchScreen.storyboard */,
 				181A42D1206C93AB004EE2A1 /* Info.plist */,
 				181A42D2206C93AB004EE2A1 /* main.m */,
+				181A434A2074D243004EE2A1 /* PrefixHeader.pch */,
 			);
 			path = ClouldKitDemo;
 			sourceTree = "<group>";
@@ -148,6 +154,15 @@
 				181A42F7206CBB93004EE2A1 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		181A43462074D031004EE2A1 /* SaveRecord */ = {
+			isa = PBXGroup;
+			children = (
+				181A43472074D065004EE2A1 /* DYSaveRecordViewController.h */,
+				181A43482074D065004EE2A1 /* DYSaveRecordViewController.m */,
+			);
+			path = SaveRecord;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181A42C8206C93AB004EE2A1 /* ViewController.m in Sources */,
+				181A43492074D065004EE2A1 /* DYSaveRecordViewController.m in Sources */,
 				181A42D3206C93AB004EE2A1 /* main.m in Sources */,
 				181A42C5206C93AB004EE2A1 /* AppDelegate.m in Sources */,
 			);
@@ -466,6 +482,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G2LMW2897;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/PrefixHeader.pch";
 				INFOPLIST_FILE = ClouldKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dov.ClouldKitDemo;
@@ -484,6 +503,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9G2LMW2897;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/PrefixHeader.pch";
 				INFOPLIST_FILE = ClouldKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dov.ClouldKitDemo;
