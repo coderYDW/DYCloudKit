@@ -35,9 +35,9 @@
     NSDateFormatter *f = [[NSDateFormatter alloc] init];
     f.dateFormat = @"yyyyMMddhhmmss";
     NSString *dateString = [f stringFromDate:nowDate];
-    //    NSLog(@"%@",dateString);
+    NSLog(@"%@",dateString);
     
-    CKRecordID *artworkRecordID = [[CKRecordID alloc] initWithRecordName:dateString];
+    CKRecordID *artworkRecordID = [[CKRecordID alloc] initWithRecordName:@"20180408144418"];
     
     CKRecord *artworkRecord = [[CKRecord alloc] initWithRecordType:RECORD_TYPE_ARTWORK recordID:artworkRecordID];
     
@@ -58,7 +58,7 @@
         
         if (error) {
             
-            //NSLog(@"failed,%@,code:%ld,domain:%@,userinfo:%@",error,error.code,error.domain,error.userInfo);
+            NSLog(@"failed,%@,code:%ld,domain:%@,userinfo:%@",error,error.code,error.domain,error.userInfo);
             if (error.code == 9) {
                 NSLog(@"未授权");
             }

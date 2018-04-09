@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1811CA812079C2D100C56C03 /* Artwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA802079C2D100C56C03 /* Artwork.m */; };
 		181A42C5206C93AB004EE2A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C4206C93AB004EE2A1 /* AppDelegate.m */; };
 		181A42C8206C93AB004EE2A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C7206C93AB004EE2A1 /* ViewController.m */; };
 		181A42CB206C93AB004EE2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181A42C9206C93AB004EE2A1 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1811CA7F2079C2D100C56C03 /* Artwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artwork.h; sourceTree = "<group>"; };
+		1811CA802079C2D100C56C03 /* Artwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artwork.m; sourceTree = "<group>"; };
 		181A42C0206C93AB004EE2A1 /* ClouldKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClouldKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181A42C3206C93AB004EE2A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		181A42C4206C93AB004EE2A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1811CA7E2079C2A800C56C03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1811CA7F2079C2D100C56C03 /* Artwork.h */,
+				1811CA802079C2D100C56C03 /* Artwork.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		181A42B7206C93AB004EE2A1 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +128,7 @@
 		181A42C2206C93AB004EE2A1 /* ClouldKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1811CA7E2079C2A800C56C03 /* Model */,
 				181A434B2074D776004EE2A1 /* FetchRecord */,
 				181A43462074D031004EE2A1 /* SaveRecord */,
 				181A42F5206CBB93004EE2A1 /* ClouldKitDemo.entitlements */,
@@ -327,6 +340,7 @@
 			files = (
 				181A42C8206C93AB004EE2A1 /* ViewController.m in Sources */,
 				181A434E2074D7A0004EE2A1 /* DYFetchRecordViewController.m in Sources */,
+				1811CA812079C2D100C56C03 /* Artwork.m in Sources */,
 				181A43492074D065004EE2A1 /* DYSaveRecordViewController.m in Sources */,
 				181A42D3206C93AB004EE2A1 /* main.m in Sources */,
 				181A42C5206C93AB004EE2A1 /* AppDelegate.m in Sources */,
