@@ -123,6 +123,28 @@
 			path = Asset;
 			sourceTree = "<group>";
 		};
+		1811CA8D207B9DE200C56C03 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				181A42C9206C93AB004EE2A1 /* Main.storyboard */,
+				181A42CE206C93AB004EE2A1 /* LaunchScreen.storyboard */,
+				1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1811CA8E207B9E2600C56C03 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				181A42D2206C93AB004EE2A1 /* main.m */,
+				181A42C3206C93AB004EE2A1 /* AppDelegate.h */,
+				181A42C4206C93AB004EE2A1 /* AppDelegate.m */,
+				181A42C6206C93AB004EE2A1 /* ViewController.h */,
+				181A42C7206C93AB004EE2A1 /* ViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		181A42B7206C93AB004EE2A1 = {
 			isa = PBXGroup;
 			children = (
@@ -147,23 +169,17 @@
 		181A42C2206C93AB004EE2A1 /* ClouldKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				181A42F5206CBB93004EE2A1 /* ClouldKitDemo.entitlements */,
+				181A42CC206C93AB004EE2A1 /* Assets.xcassets */,
+				181A42D1206C93AB004EE2A1 /* Info.plist */,
+				1811CA8E207B9E2600C56C03 /* Main */,
 				1811CA82207B8F7F00C56C03 /* Asset */,
 				1811CA7E2079C2A800C56C03 /* Model */,
 				181A434B2074D776004EE2A1 /* FetchRecord */,
 				181A43462074D031004EE2A1 /* SaveRecord */,
-				181A42F5206CBB93004EE2A1 /* ClouldKitDemo.entitlements */,
-				181A42C3206C93AB004EE2A1 /* AppDelegate.h */,
-				181A42C4206C93AB004EE2A1 /* AppDelegate.m */,
-				181A42C6206C93AB004EE2A1 /* ViewController.h */,
-				181A42C7206C93AB004EE2A1 /* ViewController.m */,
-				181A42C9206C93AB004EE2A1 /* Main.storyboard */,
-				181A42CC206C93AB004EE2A1 /* Assets.xcassets */,
-				181A42CE206C93AB004EE2A1 /* LaunchScreen.storyboard */,
-				181A42D1206C93AB004EE2A1 /* Info.plist */,
-				181A42D2206C93AB004EE2A1 /* main.m */,
+				1811CA8D207B9DE200C56C03 /* Storyboard */,
 				181A434A2074D243004EE2A1 /* PrefixHeader.pch */,
 				1811CA86207B900F00C56C03 /* timg.jpeg */,
-				1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */,
 			);
 			path = ClouldKitDemo;
 			sourceTree = "<group>";
