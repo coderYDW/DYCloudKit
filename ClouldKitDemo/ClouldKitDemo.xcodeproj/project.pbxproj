@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1811CA812079C2D100C56C03 /* Artwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA802079C2D100C56C03 /* Artwork.m */; };
+		1811CA85207B8F9C00C56C03 /* DYAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA84207B8F9C00C56C03 /* DYAssetViewController.m */; };
+		1811CA87207B900F00C56C03 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1811CA86207B900F00C56C03 /* timg.jpeg */; };
+		1811CA8A207B934F00C56C03 /* DYRecordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA89207B934F00C56C03 /* DYRecordDetailViewController.m */; };
+		1811CA8C207B98FE00C56C03 /* RecordDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */; };
 		181A42C5206C93AB004EE2A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C4206C93AB004EE2A1 /* AppDelegate.m */; };
 		181A42C8206C93AB004EE2A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C7206C93AB004EE2A1 /* ViewController.m */; };
 		181A42CB206C93AB004EE2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181A42C9206C93AB004EE2A1 /* Main.storyboard */; };
@@ -42,6 +46,12 @@
 /* Begin PBXFileReference section */
 		1811CA7F2079C2D100C56C03 /* Artwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Artwork.h; sourceTree = "<group>"; };
 		1811CA802079C2D100C56C03 /* Artwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artwork.m; sourceTree = "<group>"; };
+		1811CA83207B8F9C00C56C03 /* DYAssetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYAssetViewController.h; sourceTree = "<group>"; };
+		1811CA84207B8F9C00C56C03 /* DYAssetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYAssetViewController.m; sourceTree = "<group>"; };
+		1811CA86207B900F00C56C03 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
+		1811CA88207B934F00C56C03 /* DYRecordDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYRecordDetailViewController.h; sourceTree = "<group>"; };
+		1811CA89207B934F00C56C03 /* DYRecordDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYRecordDetailViewController.m; sourceTree = "<group>"; };
+		1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordDetail.storyboard; sourceTree = "<group>"; };
 		181A42C0206C93AB004EE2A1 /* ClouldKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClouldKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181A42C3206C93AB004EE2A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		181A42C4206C93AB004EE2A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +114,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1811CA82207B8F7F00C56C03 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				1811CA83207B8F9C00C56C03 /* DYAssetViewController.h */,
+				1811CA84207B8F9C00C56C03 /* DYAssetViewController.m */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
 		181A42B7206C93AB004EE2A1 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +147,7 @@
 		181A42C2206C93AB004EE2A1 /* ClouldKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1811CA82207B8F7F00C56C03 /* Asset */,
 				1811CA7E2079C2A800C56C03 /* Model */,
 				181A434B2074D776004EE2A1 /* FetchRecord */,
 				181A43462074D031004EE2A1 /* SaveRecord */,
@@ -142,6 +162,8 @@
 				181A42D1206C93AB004EE2A1 /* Info.plist */,
 				181A42D2206C93AB004EE2A1 /* main.m */,
 				181A434A2074D243004EE2A1 /* PrefixHeader.pch */,
+				1811CA86207B900F00C56C03 /* timg.jpeg */,
+				1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */,
 			);
 			path = ClouldKitDemo;
 			sourceTree = "<group>";
@@ -187,6 +209,8 @@
 			children = (
 				181A434C2074D7A0004EE2A1 /* DYFetchRecordViewController.h */,
 				181A434D2074D7A0004EE2A1 /* DYFetchRecordViewController.m */,
+				1811CA88207B934F00C56C03 /* DYRecordDetailViewController.h */,
+				1811CA89207B934F00C56C03 /* DYRecordDetailViewController.m */,
 			);
 			path = FetchRecord;
 			sourceTree = "<group>";
@@ -311,8 +335,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1811CA8C207B98FE00C56C03 /* RecordDetail.storyboard in Resources */,
 				181A42D0206C93AB004EE2A1 /* LaunchScreen.storyboard in Resources */,
 				181A42CD206C93AB004EE2A1 /* Assets.xcassets in Resources */,
+				1811CA87207B900F00C56C03 /* timg.jpeg in Resources */,
 				181A42CB206C93AB004EE2A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +369,9 @@
 				1811CA812079C2D100C56C03 /* Artwork.m in Sources */,
 				181A43492074D065004EE2A1 /* DYSaveRecordViewController.m in Sources */,
 				181A42D3206C93AB004EE2A1 /* main.m in Sources */,
+				1811CA85207B8F9C00C56C03 /* DYAssetViewController.m in Sources */,
 				181A42C5206C93AB004EE2A1 /* AppDelegate.m in Sources */,
+				1811CA8A207B934F00C56C03 /* DYRecordDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

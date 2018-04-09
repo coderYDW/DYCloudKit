@@ -42,6 +42,14 @@
                                     <segue destination="p0f-1W-5DI" kind="show" id="dGf-2H-OLv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQe-Yw-L8R">
+                                <rect key="frame" x="35" y="225" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="asset"/>
+                                <connections>
+                                    <segue destination="uAD-9W-Ogg" kind="show" id="zvN-oh-6HY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -126,6 +134,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSS-DU-Trd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1205.5999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Asset-->
+        <scene sceneID="OLy-OY-NUn">
+            <objects>
+                <viewController title="Asset" id="uAD-9W-Ogg" customClass="DYAssetViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rdD-Fe-CF3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="bd2-ek-NBg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okZ-f7-NFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="1570"/>
         </scene>
         <!--获取数据-->
         <scene sceneID="ghB-1Q-4Fc">

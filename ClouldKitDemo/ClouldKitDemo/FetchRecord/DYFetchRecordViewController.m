@@ -7,13 +7,13 @@
 //
 
 #import "DYFetchRecordViewController.h"
-#import "Artwork.h"
+#import "DYRecordDetailViewController.h"
 
 @interface DYFetchRecordViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) NSMutableArray *records;
+@property (nonatomic, strong) NSMutableArray <CKRecord *>*records;
 
 @end
 
@@ -22,24 +22,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"record"];
 }
 
 - (IBAction)fetchAction:(id)sender {
     
     CKDatabase *publicDatabase = [[CKContainer defaultContainer] publicCloudDatabase];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"title = %@", @""];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"artist = %@", @"Mei Chen"];
 
     CKQuery *query = [[CKQuery alloc] initWithRecordType:@"Artwork" predicate:predicate];
-    
+
     [publicDatabase performQuery:query inZoneWithID:nil completionHandler:^(NSArray<CKRecord *> * _Nullable results, NSError * _Nullable error) {
         if (error) {
             NSLog(@"%@",error);
             return;
         }
-        
+
         NSLog(@"perform query success : %@", results);
+
+        [self.records addObjectsFromArray:results];
+
+        [self.tableView reloadData];
         
     }];
     
@@ -59,21 +62,20 @@
         NSLog(@"%@",record);
         
         NSDate *date = record[@"date"];
-        
+
         record[@"artist"] = @"Mei Chen";
-        
+
         record[@"date"] = [date dateByAddingTimeInterval:30.0 * 60.0];
         
         [publicDatabase saveRecord:record completionHandler:^(CKRecord *savedRecord, NSError *saveError) {
-            
+
             // Error handling for failed save to public database
             if (saveError) {
                 NSLog(@"saveError:%@",saveError);
                 return;
             }
-            
+
             NSLog(@"save success");
-            
         }];
         
     }];
@@ -92,11 +94,11 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    Artwork *artwork = self.records[indexPath.row];
+    CKRecord *artwork = self.records[indexPath.row];
     
-    cell.textLabel.text = artwork.title;
+    cell.textLabel.text = [artwork objectForKey:@"title"];
     
-    cell.detailTextLabel.text = artwork.address;
+    cell.detailTextLabel.text = [artwork objectForKey:@"address"];
     
     return cell;
 }
@@ -104,6 +106,15 @@
 #pragma mark - tableView代理方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    CKRecord *record = self.records[indexPath.row];
+    
+    UIStoryboard *rsb = [UIStoryboard storyboardWithName:@"RecordDetail" bundle:[NSBundle mainBundle]];
+    
+    DYRecordDetailViewController *recordDetail = (DYRecordDetailViewController *)rsb.instantiateInitialViewController;
+    recordDetail.record = record;
+    [self.navigationController pushViewController:recordDetail animated:YES];
+    recordDetail.navigationItem.title = @"RecordDetail";
     
 }
 
