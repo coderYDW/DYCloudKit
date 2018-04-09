@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+}
+
+- (void)assetImage {
     CKDatabase *publicDatabase = [[CKContainer defaultContainer] publicCloudDatabase];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"timg" ofType:@"jpeg"];
@@ -38,7 +40,7 @@
             [record setObject:asset forKey:@"image"];
             
             [publicDatabase saveRecord:record completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
-               
+                
                 if (error) {
                     NSLog(@"save failed %@",error);
                     return;
@@ -49,12 +51,7 @@
             
         }];
         
-        
     }
-    
-    
-    
-    
 }
 
 
