@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1811CA812079C2D100C56C03 /* Artwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA802079C2D100C56C03 /* Artwork.m */; };
 		1811CA85207B8F9C00C56C03 /* DYAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA84207B8F9C00C56C03 /* DYAssetViewController.m */; };
-		1811CA87207B900F00C56C03 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1811CA86207B900F00C56C03 /* timg.jpeg */; };
 		1811CA8A207B934F00C56C03 /* DYRecordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA89207B934F00C56C03 /* DYRecordDetailViewController.m */; };
 		1811CA8C207B98FE00C56C03 /* RecordDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */; };
 		1811CA92207B9F1A00C56C03 /* DYLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA91207B9F1A00C56C03 /* DYLocationViewController.m */; };
@@ -49,7 +48,6 @@
 		1811CA802079C2D100C56C03 /* Artwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Artwork.m; sourceTree = "<group>"; };
 		1811CA83207B8F9C00C56C03 /* DYAssetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYAssetViewController.h; sourceTree = "<group>"; };
 		1811CA84207B8F9C00C56C03 /* DYAssetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYAssetViewController.m; sourceTree = "<group>"; };
-		1811CA86207B900F00C56C03 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		1811CA88207B934F00C56C03 /* DYRecordDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYRecordDetailViewController.h; sourceTree = "<group>"; };
 		1811CA89207B934F00C56C03 /* DYRecordDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYRecordDetailViewController.m; sourceTree = "<group>"; };
 		1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordDetail.storyboard; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 				181A42CC206C93AB004EE2A1 /* Assets.xcassets */,
 				181A42D1206C93AB004EE2A1 /* Info.plist */,
 				181A434A2074D243004EE2A1 /* PrefixHeader.pch */,
-				1811CA86207B900F00C56C03 /* timg.jpeg */,
 			);
 			path = ClouldKitDemo;
 			sourceTree = "<group>";
@@ -367,7 +364,6 @@
 				1811CA8C207B98FE00C56C03 /* RecordDetail.storyboard in Resources */,
 				181A42D0206C93AB004EE2A1 /* LaunchScreen.storyboard in Resources */,
 				181A42CD206C93AB004EE2A1 /* Assets.xcassets in Resources */,
-				1811CA87207B900F00C56C03 /* timg.jpeg in Resources */,
 				181A42CB206C93AB004EE2A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

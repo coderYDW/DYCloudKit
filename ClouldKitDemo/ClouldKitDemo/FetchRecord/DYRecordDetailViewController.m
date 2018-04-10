@@ -32,7 +32,7 @@
     
     
     CKAsset *asset = [self.record objectForKey:@"image"];
-    
+    NSLog(@"%@",asset.fileURL.absoluteString);
     UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:asset.fileURL]];
     self.image.image = image;
     NSString *title = [self.record objectForKey:@"title"];

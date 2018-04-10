@@ -28,7 +28,13 @@
     
     CKDatabase *publicDatabase = [[CKContainer defaultContainer] publicCloudDatabase];
 
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"artist = %@", @"Mei Chen"];
+    //根据条件查询
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"artist = %@", @"Mei Chen"];
+    
+    //根据位置查询记录
+    CLLocation *fixedLocation = [[CLLocation alloc] initWithLatitude:22.547 longitude:114.085947];
+    CGFloat radius = 100000; // meters
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"distanceToLocation:fromLocation:(location, %@) < %f",fixedLocation,radius];
 
     CKQuery *query = [[CKQuery alloc] initWithRecordType:@"Artwork" predicate:predicate];
 
@@ -47,6 +53,9 @@
     }];
     
 }
+
+
+
 
 
 - (void)fetchAndEditRecord {
