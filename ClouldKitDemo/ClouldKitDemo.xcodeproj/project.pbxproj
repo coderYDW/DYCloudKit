@@ -12,6 +12,7 @@
 		1811CA8A207B934F00C56C03 /* DYRecordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA89207B934F00C56C03 /* DYRecordDetailViewController.m */; };
 		1811CA8C207B98FE00C56C03 /* RecordDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */; };
 		1811CA92207B9F1A00C56C03 /* DYLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA91207B9F1A00C56C03 /* DYLocationViewController.m */; };
+		1811CA9E207D97FE00C56C03 /* DYReferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA9D207D97FE00C56C03 /* DYReferenceViewController.m */; };
 		181A42C5206C93AB004EE2A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C4206C93AB004EE2A1 /* AppDelegate.m */; };
 		181A42C8206C93AB004EE2A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C7206C93AB004EE2A1 /* ViewController.m */; };
 		181A42CB206C93AB004EE2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181A42C9206C93AB004EE2A1 /* Main.storyboard */; };
@@ -53,6 +54,8 @@
 		1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordDetail.storyboard; sourceTree = "<group>"; };
 		1811CA90207B9F1A00C56C03 /* DYLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYLocationViewController.h; sourceTree = "<group>"; };
 		1811CA91207B9F1A00C56C03 /* DYLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYLocationViewController.m; sourceTree = "<group>"; };
+		1811CA9C207D97FE00C56C03 /* DYReferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYReferenceViewController.h; sourceTree = "<group>"; };
+		1811CA9D207D97FE00C56C03 /* DYReferenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYReferenceViewController.m; sourceTree = "<group>"; };
 		181A42C0206C93AB004EE2A1 /* ClouldKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClouldKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181A42C3206C93AB004EE2A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		181A42C4206C93AB004EE2A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -155,6 +158,15 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		1811CA9B207D97D700C56C03 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				1811CA9C207D97FE00C56C03 /* DYReferenceViewController.h */,
+				1811CA9D207D97FE00C56C03 /* DYReferenceViewController.m */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
 		181A42B7206C93AB004EE2A1 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +191,7 @@
 		181A42C2206C93AB004EE2A1 /* ClouldKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1811CA9B207D97D700C56C03 /* Reference */,
 				1811CA8F207B9EA200C56C03 /* Location */,
 				1811CA82207B8F7F00C56C03 /* Asset */,
 				1811CA7E2079C2A800C56C03 /* Model */,
@@ -390,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181A42C8206C93AB004EE2A1 /* ViewController.m in Sources */,
+				1811CA9E207D97FE00C56C03 /* DYReferenceViewController.m in Sources */,
 				181A434E2074D7A0004EE2A1 /* DYFetchRecordViewController.m in Sources */,
 				1811CA812079C2D100C56C03 /* Artwork.m in Sources */,
 				181A43492074D065004EE2A1 /* DYSaveRecordViewController.m in Sources */,
