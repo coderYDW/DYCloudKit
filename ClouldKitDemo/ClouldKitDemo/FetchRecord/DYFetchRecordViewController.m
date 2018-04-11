@@ -44,7 +44,7 @@
         
         [self.records addObjectsFromArray:@[record]];
         
-        CKReference *reference = [record objectForKey:@"artist1"];
+        CKReference *reference = [record objectForKey:FIELD_ARTIST1];
         
         [publicDatabase fetchRecordWithID:reference.recordID completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
             if (error) {
@@ -69,7 +69,7 @@
     CGFloat radius = 100000; // meters
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"distanceToLocation:fromLocation:(location, %@) < %f",fixedLocation,radius];
     
-    CKQuery *query = [[CKQuery alloc] initWithRecordType:@"Artwork" predicate:predicate];
+    CKQuery *query = [[CKQuery alloc] initWithRecordType:RECORD_TYPE_ARTWORK predicate:predicate];
     
     [publicDatabase performQuery:query inZoneWithID:nil completionHandler:^(NSArray<CKRecord *> * _Nullable results, NSError * _Nullable error) {
         if (error) {
@@ -92,7 +92,7 @@
     //根据条件查询
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"artist = %@", @"Mei Chen"];
     
-    CKQuery *query = [[CKQuery alloc] initWithRecordType:@"Artwork" predicate:predicate];
+    CKQuery *query = [[CKQuery alloc] initWithRecordType:RECORD_TYPE_ARTWORK predicate:predicate];
     
     [publicDatabase performQuery:query inZoneWithID:nil completionHandler:^(NSArray<CKRecord *> * _Nullable results, NSError * _Nullable error) {
         if (error) {
@@ -122,11 +122,11 @@
         
         NSLog(@"%@",record);
         
-        NSDate *date = record[@"date"];
+        NSDate *date = record[FIELD_DATE];
 
-        record[@"artist"] = @"Mei Chen";
+        record[FIELD_ARTIST] = @"Mei Chen";
 
-        record[@"date"] = [date dateByAddingTimeInterval:30.0 * 60.0];
+        record[FIELD_DATE] = [date dateByAddingTimeInterval:30.0 * 60.0];
         
         [publicDatabase saveRecord:record completionHandler:^(CKRecord *savedRecord, NSError *saveError) {
 
@@ -157,13 +157,13 @@
     
     CKRecord *artwork = self.records[indexPath.row];
     
-    if ([artwork.recordType isEqualToString:@"ArtWork"]) {
-        cell.textLabel.text = [artwork objectForKey:@"title"];
-        cell.detailTextLabel.text = [artwork objectForKey:@"address"];
+    if ([artwork.recordType isEqualToString:RECORD_TYPE_ARTWORK]) {
+        cell.textLabel.text = [artwork objectForKey:FIELD_TITLE];
+        cell.detailTextLabel.text = [artwork objectForKey:FIELD_ADDRESS];
     }
     else {
-        cell.textLabel.text = [artwork objectForKey:@"firstName"];
-        cell.detailTextLabel.text = [artwork objectForKey:@"lastName"];
+        cell.textLabel.text = [artwork objectForKey:FIELD_FIRST_NAME];
+        cell.detailTextLabel.text = [artwork objectForKey:FIELD_LAST_NAME];
     }
     
     return cell;

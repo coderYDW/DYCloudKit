@@ -31,14 +31,14 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    CKAsset *asset = [self.record objectForKey:@"image"];
+    CKAsset *asset = [self.record objectForKey:FIELD_IMAGE];
     NSLog(@"%@",asset.fileURL.absoluteString);
     UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:asset.fileURL]];
     self.image.image = image;
-    NSString *title = [self.record objectForKey:@"title"];
+    NSString *title = [self.record objectForKey:FIELD_TITLE];
     self.title1.text = title;
-    self.address.text = [self.record objectForKey:@"address"];
-    self.artist.text = [self.record objectForKey:@"artist"];
+    self.address.text = [self.record objectForKey:FIELD_ADDRESS];
+    self.artist.text = [self.record objectForKey:FIELD_ARTIST];
     
 }
 

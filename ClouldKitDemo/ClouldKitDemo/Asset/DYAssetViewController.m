@@ -37,7 +37,7 @@
                 return;
             }
             NSLog(@"%@",record);
-            [record setObject:asset forKey:@"image"];
+            [record setObject:asset forKey:FIELD_IMAGE];
             
             [publicDatabase saveRecord:record completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
                 

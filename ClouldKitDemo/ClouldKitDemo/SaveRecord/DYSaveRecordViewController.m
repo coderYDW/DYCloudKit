@@ -41,13 +41,13 @@
     
     CKRecord *artworkRecord = [[CKRecord alloc] initWithRecordType:RECORD_TYPE_ARTWORK recordID:artworkRecordID];
     
-    artworkRecord[@"title" ] = self.title1.text;
+    artworkRecord[FIELD_TITLE ] = self.title1.text;
     
-    artworkRecord[@"artist"] = self.artist.text;
+    artworkRecord[FIELD_ARTIST] = self.artist.text;
     
-    artworkRecord[@"address"] = self.address.text;
+    artworkRecord[FIELD_ADDRESS] = self.address.text;
     
-    artworkRecord[@"date"] = [NSDate date];
+    artworkRecord[FIELD_DATE] = [NSDate date];
     
     CKContainer *myContainer = [CKContainer defaultContainer];
     

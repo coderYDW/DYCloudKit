@@ -17,4 +17,16 @@
 #define RECORD_TYPE_ARTWORK @"ArtWork"
 #define RECORD_TYPE_ARTIST @"Artist"
 
+#define FIELD_TITLE @"title"
+#define FIELD_ARTIST @"artist"
+#define FIELD_ADDRESS @"address"
+#define FIELD_IMAGE @"image"
+#define FIELD_DATE @"date"
+#define FIELD_LOCATION @"location"
+#define FIELD_ARTIST1 @"artist1"
+
+#define FIELD_FIRST_NAME @"firstName"
+#define FIELD_LAST_NAME @"lastName"
+#define FIELD_MIDDLE_NAME @"middleName"
+
 #endif /* PrefixHeader_pch */

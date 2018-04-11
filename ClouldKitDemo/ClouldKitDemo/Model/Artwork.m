@@ -22,20 +22,20 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     if (self = [super init]) {
-        self.title = [dictionary objectForKey:@"title"];
-        self.date = [dictionary objectForKey:@"date"];
-        self.artist = [dictionary objectForKey:@"artist"];
-        self.address = [dictionary objectForKey:@"address"];
+        self.title = [dictionary objectForKey:FIELD_TITLE];
+        self.date = [dictionary objectForKey:FIELD_DATE];
+        self.artist = [dictionary objectForKey:FIELD_ARTIST];
+        self.address = [dictionary objectForKey:FIELD_ADDRESS];
     }
     return self;
 }
 
 - (instancetype)initWithRecord:(CKRecord *)record {
     if (self = [super init]) {
-        self.title = [record objectForKey:@"title"];
-        self.date = [record objectForKey:@"date"];
-        self.artist = [record objectForKey:@"artist"];
-        self.address = [record objectForKey:@"address"];
+        self.title = [record objectForKey:FIELD_TITLE];
+        self.date = [record objectForKey:FIELD_DATE];
+        self.artist = [record objectForKey:FIELD_ARTIST];
+        self.address = [record objectForKey:FIELD_ADDRESS];
     }
     return self;
 }

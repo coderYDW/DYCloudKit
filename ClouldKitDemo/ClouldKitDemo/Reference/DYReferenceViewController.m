@@ -40,7 +40,7 @@
             
             NSLog(@"record : %@",record);
             
-            [record setObject:reference forKey:@"artist1"];
+            [record setObject:reference forKey:FIELD_ARTIST1];
             
             [self.publicDatabase saveRecord:record completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
                 if (error) {
@@ -61,10 +61,10 @@
     
     CKRecordID *artistRecordID = [[CKRecordID alloc] initWithRecordName:@"Mei Chen"];
     
-    CKRecord *artistRecord = [[CKRecord alloc] initWithRecordType:@"Artist" recordID:artistRecordID];
+    CKRecord *artistRecord = [[CKRecord alloc] initWithRecordType:RECORD_TYPE_ARTIST recordID:artistRecordID];
     
-    [artistRecord setObject:@"Mei" forKey:@"firstName"];
-    [artistRecord setObject:@"Chen" forKey:@"lastName"];
+    [artistRecord setObject:@"Mei" forKey:FIELD_FIRST_NAME];
+    [artistRecord setObject:@"Chen" forKey:FIELD_LAST_NAME];
     
     CKDatabase *publicDatabase = [[CKContainer defaultContainer] publicCloudDatabase];
     

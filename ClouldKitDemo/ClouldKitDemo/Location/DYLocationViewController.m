@@ -37,7 +37,7 @@
         
         NSLog(@"%@",record);
         
-        [record setObject:location forKey:@"location"];
+        [record setObject:location forKey:FIELD_LOCATION];
         
         [publicDatabase saveRecord:record completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
             if (error) {
