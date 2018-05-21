@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *address;
 @property (weak, nonatomic) IBOutlet UITextField *title1;
 @property (weak, nonatomic) IBOutlet UITextField *artist;
+@property (weak, nonatomic) IBOutlet UITextField *name;
 
 @end
 
@@ -24,20 +25,24 @@
 
 - (IBAction)saveButton:(id)sender {
     
-    if (self.address.text.length <= 0 || self.title1.text.length <= 0 || self.artist.text.length <= 0) {
+    if (self.address.text.length <= 0 ||
+        self.title1.text.length <= 0 ||
+        self.artist.text.length <= 0 ||
+        self.name.text.length <= 0) {
+        
         NSLog(@"请填写信息完整");
         return;
     }
     
     // Insert your just-in-time schema code here
     
-    NSDate *nowDate = [NSDate date];
-    NSDateFormatter *f = [[NSDateFormatter alloc] init];
-    f.dateFormat = @"yyyyMMddhhmmss";
-    NSString *dateString = [f stringFromDate:nowDate];
-    NSLog(@"%@",dateString);
+//    NSDate *nowDate = [NSDate date];
+//    NSDateFormatter *f = [[NSDateFormatter alloc] init];
+//    f.dateFormat = @"yyyyMMddhhmmss";
+//    NSString *dateString = [f stringFromDate:nowDate];
+//    NSLog(@"%@",dateString);
     
-    CKRecordID *artworkRecordID = [[CKRecordID alloc] initWithRecordName:@"20180408144418"];
+    CKRecordID *artworkRecordID = [[CKRecordID alloc] initWithRecordName:self.name.text];
     
     CKRecord *artworkRecord = [[CKRecord alloc] initWithRecordType:RECORD_TYPE_ARTWORK recordID:artworkRecordID];
     

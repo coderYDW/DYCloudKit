@@ -13,6 +13,11 @@
 		1811CA8C207B98FE00C56C03 /* RecordDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1811CA8B207B98FE00C56C03 /* RecordDetail.storyboard */; };
 		1811CA92207B9F1A00C56C03 /* DYLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA91207B9F1A00C56C03 /* DYLocationViewController.m */; };
 		1811CA9E207D97FE00C56C03 /* DYReferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811CA9D207D97FE00C56C03 /* DYReferenceViewController.m */; };
+		18152F0920B26D0A009CDE93 /* shortRent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18152F0820B26D09009CDE93 /* shortRent@2x.png */; };
+		18152F0C20B26FD3009CDE93 /* hirePurchase@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18152F0B20B26FD3009CDE93 /* hirePurchase@2x.png */; };
+		18152F0E20B26FDF009CDE93 /* shareRent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18152F0D20B26FDF009CDE93 /* shareRent@2x.png */; };
+		18152F1020B26FED009CDE93 /* longRent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18152F0F20B26FEC009CDE93 /* longRent@2x.png */; };
+		18152F1220B2AE34009CDE93 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18152F1120B2AE34009CDE93 /* CoreLocation.framework */; };
 		181A42C5206C93AB004EE2A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C4206C93AB004EE2A1 /* AppDelegate.m */; };
 		181A42C8206C93AB004EE2A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C7206C93AB004EE2A1 /* ViewController.m */; };
 		181A42CB206C93AB004EE2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181A42C9206C93AB004EE2A1 /* Main.storyboard */; };
@@ -56,6 +61,11 @@
 		1811CA91207B9F1A00C56C03 /* DYLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYLocationViewController.m; sourceTree = "<group>"; };
 		1811CA9C207D97FE00C56C03 /* DYReferenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYReferenceViewController.h; sourceTree = "<group>"; };
 		1811CA9D207D97FE00C56C03 /* DYReferenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYReferenceViewController.m; sourceTree = "<group>"; };
+		18152F0820B26D09009CDE93 /* shortRent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortRent@2x.png"; sourceTree = "<group>"; };
+		18152F0B20B26FD3009CDE93 /* hirePurchase@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hirePurchase@2x.png"; path = "ClouldKitDemo/Assets.xcassets/hirePurchase.imageset/hirePurchase@2x.png"; sourceTree = SOURCE_ROOT; };
+		18152F0D20B26FDF009CDE93 /* shareRent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shareRent@2x.png"; path = "ClouldKitDemo/Assets.xcassets/shareRent.imageset/shareRent@2x.png"; sourceTree = SOURCE_ROOT; };
+		18152F0F20B26FEC009CDE93 /* longRent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "longRent@2x.png"; path = "ClouldKitDemo/Assets.xcassets/longRent.imageset/longRent@2x.png"; sourceTree = SOURCE_ROOT; };
+		18152F1120B2AE34009CDE93 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		181A42C0206C93AB004EE2A1 /* ClouldKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClouldKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181A42C3206C93AB004EE2A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		181A42C4206C93AB004EE2A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18152F1220B2AE34009CDE93 /* CoreLocation.framework in Frameworks */,
 				181A42F8206CBB93004EE2A1 /* HealthKit.framework in Frameworks */,
 				181A4340206CC5FD004EE2A1 /* CloudKit.framework in Frameworks */,
 			);
@@ -167,6 +178,17 @@
 			path = Reference;
 			sourceTree = "<group>";
 		};
+		18152F0A20B26D3C009CDE93 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				18152F0F20B26FEC009CDE93 /* longRent@2x.png */,
+				18152F0D20B26FDF009CDE93 /* shareRent@2x.png */,
+				18152F0B20B26FD3009CDE93 /* hirePurchase@2x.png */,
+				18152F0820B26D09009CDE93 /* shortRent@2x.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
 		181A42B7206C93AB004EE2A1 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +225,7 @@
 				181A42CC206C93AB004EE2A1 /* Assets.xcassets */,
 				181A42D1206C93AB004EE2A1 /* Info.plist */,
 				181A434A2074D243004EE2A1 /* PrefixHeader.pch */,
+				18152F0A20B26D3C009CDE93 /* res */,
 			);
 			path = ClouldKitDemo;
 			sourceTree = "<group>";
@@ -228,6 +251,7 @@
 		181A42F6206CBB93004EE2A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18152F1120B2AE34009CDE93 /* CoreLocation.framework */,
 				181A433F206CC5FD004EE2A1 /* CloudKit.framework */,
 				181A42F7206CBB93004EE2A1 /* HealthKit.framework */,
 			);
@@ -375,9 +399,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1811CA8C207B98FE00C56C03 /* RecordDetail.storyboard in Resources */,
+				18152F0E20B26FDF009CDE93 /* shareRent@2x.png in Resources */,
+				18152F0920B26D0A009CDE93 /* shortRent@2x.png in Resources */,
 				181A42D0206C93AB004EE2A1 /* LaunchScreen.storyboard in Resources */,
 				181A42CD206C93AB004EE2A1 /* Assets.xcassets in Resources */,
+				18152F1020B26FED009CDE93 /* longRent@2x.png in Resources */,
 				181A42CB206C93AB004EE2A1 /* Main.storyboard in Resources */,
+				18152F0C20B26FD3009CDE93 /* hirePurchase@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

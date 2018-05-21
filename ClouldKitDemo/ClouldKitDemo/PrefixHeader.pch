@@ -29,4 +29,10 @@
 #define FIELD_LAST_NAME @"lastName"
 #define FIELD_MIDDLE_NAME @"middleName"
 
+
+//---------------- 便捷定义 --------------
+
+#define PUBLIC_DATABASE [[CKContainer defaultContainer] publicCloudDatabase]
+
+
 #endif /* PrefixHeader_pch */

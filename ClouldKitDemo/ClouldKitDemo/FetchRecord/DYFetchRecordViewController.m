@@ -27,9 +27,33 @@
 - (IBAction)fetchAction:(id)sender {
     
     
-    [self fetchRecordWithReference];
+    [self fetchRecordWithReferenceOneToMany];
 }
 
+
+- (void)fetchRecordWithReferenceOneToMany {
+    
+    CKRecordID *artistRecordID = [[CKRecordID alloc] initWithRecordName:@"Mei Chen"];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"artist1 = %@", artistRecordID];
+    
+    CKQuery *query = [[CKQuery alloc] initWithRecordType:RECORD_TYPE_ARTWORK predicate:predicate];
+    
+    CKDatabase *publicDatabase = [[CKContainer defaultContainer] publicCloudDatabase];
+    
+    [publicDatabase performQuery:query inZoneWithID:nil completionHandler:^(NSArray *results, NSError *error) {
+        
+        if (error) {
+            NSLog(@"error : %@",error);
+            return;
+        }
+        NSLog(@"results : %@",results);
+        [self.records addObjectsFromArray:results];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
+}
 
 - (void)fetchRecordWithReference {
     
@@ -54,8 +78,9 @@
             NSLog(@"%@",record);
             
             [self.records addObjectsFromArray:@[record]];
-            
-            [self.tableView reloadData];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
         }];
         
     }];
@@ -81,7 +106,9 @@
         
         [self.records addObjectsFromArray:results];
         
-        [self.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
         
     }];
 }
@@ -104,7 +131,9 @@
         
         [self.records addObjectsFromArray:results];
         
-        [self.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
         
     }];
 }
