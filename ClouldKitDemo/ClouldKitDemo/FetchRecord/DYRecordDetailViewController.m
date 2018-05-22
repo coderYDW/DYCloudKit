@@ -39,6 +39,9 @@
     self.title1.text = title;
     self.address.text = [self.record objectForKey:FIELD_ADDRESS];
     self.artist.text = [self.record objectForKey:FIELD_ARTIST];
+//    CKRecord *recordArtist =  [self.record objectForKey:FIELD_ARTIST1];
+//    NSString *firstName = [recordArtist objectForKey:FIELD_FIRST_NAME];
+//    NSLog(@"recordArtist : %@",firstName);
     
 }
 

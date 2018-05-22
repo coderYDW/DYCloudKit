@@ -26,6 +26,11 @@
 
 - (IBAction)fetchAction:(id)sender {
     
+//    [self fetchRecordWithRecordName:@"Mei Chen" success:^(CKRecord * _Nullable record) {
+//        NSLog(@"record : %@",record);
+//    } failed:^(NSError * _Nullable error) {
+//        NSLog(@"%@",error);
+//    }];
     
     [self fetchRecordWithReferenceOneToMany];
 }
@@ -169,6 +174,38 @@
         }];
         
     }];
+}
+
+- (void)fetchRecordWithRecordName:(NSString *)recordName
+                          success:(void(^)(CKRecord * _Nullable record))success
+                           failed:(void(^)(NSError * _Nullable error))failed {
+    
+    if (recordName.length <= 0) {
+        NSLog(@"recordName不能为空");
+        return;
+    }
+    
+    CKDatabase *publicDatabase = [[CKContainer defaultContainer] publicCloudDatabase];
+    CKRecordID *recordID = [[CKRecordID alloc] initWithRecordName:recordName];
+    [publicDatabase fetchRecordWithID:recordID completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (error) {
+                if (failed) {
+                    failed(error);
+                }
+                return;
+            }
+            
+            if (success) {
+                success(record);
+            }
+            
+        });
+        
+    }];
+    
 }
 
 #pragma mark - 数据源方法

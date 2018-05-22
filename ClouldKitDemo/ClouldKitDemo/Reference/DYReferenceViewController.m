@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *recordName;
 @property (weak, nonatomic) IBOutlet UITextField *artistName;
+@property (weak, nonatomic) IBOutlet UISwitch *s1;
 
 @end
 
@@ -49,7 +50,8 @@
 
 - (void)fetchArtwork:(NSString *)recordName artistId:(CKRecordID *)artistId {
     
-    CKReference *reference = [[CKReference alloc] initWithRecordID:artistId action:CKReferenceActionNone];
+    CKReferenceAction action = self.s1.on ? CKReferenceActionDeleteSelf : CKReferenceActionNone;
+    CKReference *reference = [[CKReference alloc] initWithRecordID:artistId action:action];
     CKRecordID *recordID = [[CKRecordID alloc] initWithRecordName:self.recordName.text];
     [self.publicDatabase fetchRecordWithID:recordID completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
         if (error) {
@@ -76,12 +78,13 @@
 
 - (IBAction)save:(id)sender {
     
-    CKRecordID *artistRecordID = [[CKRecordID alloc] initWithRecordName:@"Mei Chen"];
+    CKRecordID *artistRecordID = [[CKRecordID alloc] initWithRecordName:self.recordName.text];
     
     CKRecord *artistRecord = [[CKRecord alloc] initWithRecordType:RECORD_TYPE_ARTIST recordID:artistRecordID];
     
-    [artistRecord setObject:@"Mei" forKey:FIELD_FIRST_NAME];
-    [artistRecord setObject:@"Chen" forKey:FIELD_LAST_NAME];
+    [artistRecord setObject:@"Xiao" forKey:FIELD_FIRST_NAME];
+    [artistRecord setObject:@"Rose" forKey:FIELD_MIDDLE_NAME];
+    [artistRecord setObject:@"Hong" forKey:FIELD_LAST_NAME];
     
     CKDatabase *publicDatabase = [[CKContainer defaultContainer] publicCloudDatabase];
     
