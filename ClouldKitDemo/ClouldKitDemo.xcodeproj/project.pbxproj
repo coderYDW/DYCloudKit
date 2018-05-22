@@ -19,6 +19,7 @@
 		18152F1020B26FED009CDE93 /* longRent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18152F0F20B26FEC009CDE93 /* longRent@2x.png */; };
 		18152F1220B2AE34009CDE93 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18152F1120B2AE34009CDE93 /* CoreLocation.framework */; };
 		18152F1620B3B1F5009CDE93 /* DYOperationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18152F1520B3B1F5009CDE93 /* DYOperationsViewController.m */; };
+		18152F1A20B42EC0009CDE93 /* DYSubscriptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18152F1920B42EC0009CDE93 /* DYSubscriptionsViewController.m */; };
 		181A42C5206C93AB004EE2A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C4206C93AB004EE2A1 /* AppDelegate.m */; };
 		181A42C8206C93AB004EE2A1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A42C7206C93AB004EE2A1 /* ViewController.m */; };
 		181A42CB206C93AB004EE2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181A42C9206C93AB004EE2A1 /* Main.storyboard */; };
@@ -69,6 +70,8 @@
 		18152F1120B2AE34009CDE93 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		18152F1420B3B1F5009CDE93 /* DYOperationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYOperationsViewController.h; sourceTree = "<group>"; };
 		18152F1520B3B1F5009CDE93 /* DYOperationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYOperationsViewController.m; sourceTree = "<group>"; };
+		18152F1820B42EC0009CDE93 /* DYSubscriptionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYSubscriptionsViewController.h; sourceTree = "<group>"; };
+		18152F1920B42EC0009CDE93 /* DYSubscriptionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYSubscriptionsViewController.m; sourceTree = "<group>"; };
 		181A42C0206C93AB004EE2A1 /* ClouldKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClouldKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181A42C3206C93AB004EE2A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		181A42C4206C93AB004EE2A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -201,6 +204,15 @@
 			path = Operations;
 			sourceTree = "<group>";
 		};
+		18152F1720B42EAC009CDE93 /* Subscriptions */ = {
+			isa = PBXGroup;
+			children = (
+				18152F1820B42EC0009CDE93 /* DYSubscriptionsViewController.h */,
+				18152F1920B42EC0009CDE93 /* DYSubscriptionsViewController.m */,
+			);
+			path = Subscriptions;
+			sourceTree = "<group>";
+		};
 		181A42B7206C93AB004EE2A1 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +237,7 @@
 		181A42C2206C93AB004EE2A1 /* ClouldKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				18152F1720B42EAC009CDE93 /* Subscriptions */,
 				18152F1320B3B1CB009CDE93 /* Operations */,
 				1811CA9B207D97D700C56C03 /* Reference */,
 				1811CA8F207B9EA200C56C03 /* Location */,
@@ -445,6 +458,7 @@
 			files = (
 				181A42C8206C93AB004EE2A1 /* ViewController.m in Sources */,
 				1811CA9E207D97FE00C56C03 /* DYReferenceViewController.m in Sources */,
+				18152F1A20B42EC0009CDE93 /* DYSubscriptionsViewController.m in Sources */,
 				181A434E2074D7A0004EE2A1 /* DYFetchRecordViewController.m in Sources */,
 				1811CA812079C2D100C56C03 /* Artwork.m in Sources */,
 				181A43492074D065004EE2A1 /* DYSaveRecordViewController.m in Sources */,
